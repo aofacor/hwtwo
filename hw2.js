@@ -21,29 +21,18 @@ let blockchain = [
 ]
 
 
-let wallet = [
-{user:"brian", bal: 0},
-{user:"ben", bal: 0},
-{user:"jeff", bal: 0}
-]
+//every function in javascript is defined with function(){}
+//we can call the parameter name whatever we want. This is another variable we are defining on the fly. What ever we call it is completely up to us.
 
-  let balance = function(userwallet){
-    for (let x=0; x< wallet.length; x++)
-    {if (wallet[x].user === userwallet)
-    return wallet[x].bal}
-  }
+let getBalance = function(username){
 
-  for (let x = 0; x < blockchain.length; x++) {
-    for (let y = 0; y < wallet.length; y++) {
-      if (blockchain[x].toUser === wallet[y].user) {
-       wallet[y].bal += blockchain[x].amount
-     }
-      else if (blockchain[x].fromUser === wallet[y].user){
-        wallet[y].bal -=  blockchain[x].amount
-      }
-    }
-  }
+  
+}
 
-  console.log("Brian's KelloggCoin bal is " + balance("brian"));
-  console.log("Ben's KelloggCoin bal is " + balance("ben"));
-  console.log("Jeff's KelloggCoin bal is " + balance("jeff"));
+
+
+//getBalance is a function
+console.log("Brian's KelloggCoin bal is " + getBalance("brian"));
+console.log("Ben's KelloggCoin bal is " + getBalance("ben"));
+console.log("Jeff's KelloggCoin bal is " + getBalance("jeff"));
+console.log(blockchain.length)
